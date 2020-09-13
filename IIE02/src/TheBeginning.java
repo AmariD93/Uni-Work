@@ -29,10 +29,10 @@ public class TheBeginning {
 		 * cost and overall cost
 		 */
 		double beerCost;
-		double totalCost;
+		double totalBeerCost;
 		beerCost = 6.57;
-		totalCost = beerAmount * beerCost;
-		gt.println("It has costed you " + "$" + beerCost + " for each beer and " + "$" + totalCost + " for the night");
+		totalBeerCost = beerAmount * beerCost;
+		gt.println("It has costed you " + "$" + beerCost + " for each beer and " + "$" + totalBeerCost + " for the night");
 
 		/* --Char--
 		* The program is going to auto assign you a nickname based off off the first
@@ -51,8 +51,20 @@ public class TheBeginning {
 		gt.println("You have had enough don't you think? " + isThatOk);
 
 		
+		//Dialog based off of User input. this is you JOptionPane
+		
 		userName = JOptionPane.showInputDialog("Hey there!, What's your name?");
-		beerAmount = Integer.parseInt(JOptionPane.showInputDialog("how beers?"));
+		beerAmount = Integer.parseInt(JOptionPane.showInputDialog("How many beers did you have tonight?"));
+		beerCost = Double.parseDouble(JOptionPane.showInputDialog("How much did each beers cost?"));
+		totalBeerCost = beerAmount * beerCost;
+		nickName = userName.charAt(0);
+		
+					
+		JOptionPane.showMessageDialog(null, "Hey " +userName + "!" + " How is your night?");
+		JOptionPane.showMessageDialog(null, "Wow! You've had " + beerAmount + " beers tonight");
+		JOptionPane.showMessageDialog(null, "This night has costed you " + totalBeerCost);
+		JOptionPane.showMessageDialog(null,  "Is it cool if I call you " + nickName + " Dawg?");
+		
 		// gt.showHelp();
 	}
 }
