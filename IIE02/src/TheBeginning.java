@@ -63,15 +63,20 @@ public class TheBeginning {
 		JOptionPane.showMessageDialog(null, "This night has costed you " + totalBeerCost);
 		JOptionPane.showMessageDialog(null, "Is it cool if I call you " + nickName + " Dawg?");
 
-		int didYouEnjoy1 = JOptionPane.showConfirmDialog(null, "Did you enjoy your night?"+ JOptionPane.YES_NO_OPTION);
+		int didYouEnjoy = JOptionPane.showConfirmDialog(null,
+				"Did you you enjoy your night?" + JOptionPane.YES_NO_OPTION);
 
-		if (true) {
+		if (didYouEnjoy == JOptionPane.YES_OPTION) {
 			JOptionPane.showMessageDialog(null, "I'm glad you enjoyed your night");
-		} else {
-			JOptionPane.showMessageDialog(null, "I'm sorry you didn't enjoy yourself");
+
 		}
-		
-		
+		if (didYouEnjoy == JOptionPane.NO_OPTION) {
+			JOptionPane.showMessageDialog(null, "I'm sorry you didn't enjoy yourself");
+		} else {
+			JOptionPane.showMessageDialog(null, "Ok then, I guess I will leave you alone.");
+
+		}
+
 		// gt.showHelp();
 	}
 }
