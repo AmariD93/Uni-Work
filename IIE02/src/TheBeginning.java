@@ -50,20 +50,27 @@ public class TheBeginning {
 		isThatOk = false;
 		gt.println("You have had enough don't you think? " + isThatOk);
 
-		
-		//Dialog based off of User input. this is you JOptionPane
-		
-		userName = JOptionPane.showInputDialog("Hey there!, What's your name?");
+		// Dialog based off of User input. this is you JOptionPane
+
+		userName = JOptionPane.showInputDialog("Hey there! What's your name?");
 		beerAmount = Integer.parseInt(JOptionPane.showInputDialog("How many beers did you have tonight?"));
 		beerCost = Double.parseDouble(JOptionPane.showInputDialog("How much did each beers cost?"));
 		totalBeerCost = beerAmount * beerCost;
 		nickName = userName.charAt(0);
-		
-					
-		JOptionPane.showMessageDialog(null, "Hey " +userName + "!" + " How is your night?");
+
+		JOptionPane.showMessageDialog(null, "Hey " + userName + "!" + " How is your night?");
 		JOptionPane.showMessageDialog(null, "Wow! You've had " + beerAmount + " beers tonight");
 		JOptionPane.showMessageDialog(null, "This night has costed you " + totalBeerCost);
-		JOptionPane.showMessageDialog(null,  "Is it cool if I call you " + nickName + " Dawg?");
+		JOptionPane.showMessageDialog(null, "Is it cool if I call you " + nickName + " Dawg?");
+
+		int didYouEnjoy1 = JOptionPane.showConfirmDialog(null, "Did you enjoy your night?"+ JOptionPane.YES_NO_OPTION);
+
+		if (true) {
+			JOptionPane.showMessageDialog(null, "I'm glad you enjoyed your night");
+		} else {
+			JOptionPane.showMessageDialog(null, "I'm sorry you didn't enjoy yourself");
+		}
+		
 		
 		// gt.showHelp();
 	}
