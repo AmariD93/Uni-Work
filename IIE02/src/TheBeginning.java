@@ -1,4 +1,4 @@
-//TEST// Hello there
+//TEST// Hello there// test
 
 public class TheBeginning {
 	public static void main(String[] args) {
