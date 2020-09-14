@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class TheBeginning {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter your name: ");
+		
+		
+		
+		
+		//This variable enters has the user enter their name and returns with a greeting
+		String name;
+		name=sc.next();
+		System.out.print("Hello, Nice to meet you " + name);
+		
+		
+		sc.close();
+		
+;
+		//gt.showHelp();
+	}
+}

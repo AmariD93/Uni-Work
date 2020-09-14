@@ -1,0 +1,12 @@
+import java.awt.Color;
+
+public class TheBeginning {
+	public static void main(String[] args) {
+		GTerm gt = new GTerm(600, 450);
+	
+	
+	
+		
+		//gt.showHelp();
+	}
+}

@@ -1,0 +1,19 @@
+public class TheBeginning {
+	public static void main(String[] args) {
+		GTerm gt = new GTerm (500,200);
+		
+		// --String--
+		
+		/*I chose to use String vairable (userName) as it keeps it simple, The user Will be entering their names to return an output 
+		 * 
+		 */
+		String userName;
+		userName= "Daniel";
+		System.out.print("Hey there  " + userName + " How are you?");
+		
+		
+		
+
+		//gt.showHelp();
+	}
+}

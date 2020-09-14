@@ -1,0 +1,9 @@
+import java.awt.Color;
+
+public class HelloWorld {
+	public static void main(String[] args) {
+		GTerm gt = new GTerm (600,600);
+		
+		//gt.showHelp();
+	}
+}

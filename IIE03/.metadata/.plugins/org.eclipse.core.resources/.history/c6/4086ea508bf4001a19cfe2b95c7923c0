@@ -1,0 +1,19 @@
+public class theBeginning {
+	public static void main(String[] args) {
+		//GTerm gt = new GTerm(600, 450);
+		
+		//string//Set a name for your character
+		//char//Set what his nick name is
+		//int//Set how many kids he has
+		int currentYear=2020;
+		int birthYear=1993;
+		int myAge=currentYear - birthYear;
+		System.out.println(myAge);
+		
+		//double//Set how much he got for selling them
+	
+	
+		
+		//gt.showHelp();
+	}
+}

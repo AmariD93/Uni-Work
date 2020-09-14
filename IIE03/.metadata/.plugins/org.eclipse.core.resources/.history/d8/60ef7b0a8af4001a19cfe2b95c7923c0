@@ -1,0 +1,12 @@
+public class theBeginning {
+	public static void main(String[] args) {
+		//GTerm gt = new GTerm(600, 450);
+		
+		System.out.println("Awesome");
+	
+	
+	
+		
+		//gt.showHelp();
+	}
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;theBeginning&apos; to &apos;firstShot&apos;&#x0D;&#x0A;- Original project: &apos;My first writing from scratch&apos;&#x0D;&#x0A;- Original element: &apos;theBeginning&apos;&#x0D;&#x0A;- Renamed element: &apos;firstShot&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;theBeginning&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{theBeginning.java[theBeginning" matchStrategy="1" name="firstShot" qualified="false" references="true" similarDeclarations="false" stamp="1599729163827" textual="false" version="1.0"/>
+</session>

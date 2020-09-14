@@ -1,0 +1,23 @@
+import java.awt.Color;
+
+public class HelloWorld {
+	public static void main(String[] args) {
+		GTerm gt = new GTerm(1110, 500);
+		gt.setFontSize(20);
+		gt.setFontColor(0,0,0);
+		gt.setXY(100, 0);
+		gt.println("Hey! My name is Daniel.");
+		gt.setXY(500, 0);
+		gt.addImageIcon("Snow.jpg");
+		gt.setFontSize(16);
+		gt.setXY(10,70);
+		gt.println("Here is a picture I took at the snow this season" + "\n" + 
+		"I hope to one day get a remote, work from" + "\n" + "home, job in IT. Then I can live by the snow.");
+		
+		
+	
+		
+		
+		//gt.showHelp();
+	}
+}
