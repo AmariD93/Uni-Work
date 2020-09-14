@@ -1,5 +1,3 @@
-import javax.swing.JOptionPane;
-
 public class TheBeginning {
 	public static void main(String[] args) {
 		GTerm gt = new GTerm(500, 200);
@@ -52,31 +50,17 @@ public class TheBeginning {
 
 		// Dialog based off of User input. this is you JOptionPane
 
-		userName = JOptionPane.showInputDialog("Hey there! What's your name?");
-		beerAmount = Integer.parseInt(JOptionPane.showInputDialog("How many beers did you have tonight?"));
-		beerCost = Double.parseDouble(JOptionPane.showInputDialog("How much did each beers cost?"));
+		userName = gt.getInputString("Hey there! What's your name?");
+		beerAmount = Integer.parseInt(gt.getInputString("How many beers did you have tonight?"));
+		beerCost = Double.parseDouble(gt.getInputString("How much did each beers cost?"));
 		totalBeerCost = beerAmount * beerCost;
 		nickName = userName.charAt(0);
 
-		JOptionPane.showMessageDialog(null, "Hey " + userName + "!" + " How is your night?");
-		JOptionPane.showMessageDialog(null, "Wow! You've had " + beerAmount + " beers tonight");
-		JOptionPane.showMessageDialog(null, "This night has costed you " + totalBeerCost);
-		JOptionPane.showMessageDialog(null, "Is it cool if I call you " + nickName + " Dawg?");
+		gt.showMessageDialog("Hey " + userName + "!" + " How is your night?" + "\n" + "Wow! You've had " + beerAmount
+						+ " beers tonight" + "\n" + "This night has costed you $" + totalBeerCost + "\n"
+						+ "Is it cool if I call you " + nickName + " Dawg?"); 
+		
 
-		int didYouEnjoy = JOptionPane.showConfirmDialog(null,
-				"Did you you enjoy your night?" + JOptionPane.YES_NO_OPTION);
-
-		if (didYouEnjoy == JOptionPane.YES_OPTION) {
-			JOptionPane.showMessageDialog(null, "I'm glad you enjoyed your night");
-
-		}
-		if (didYouEnjoy == JOptionPane.NO_OPTION) {
-			JOptionPane.showMessageDialog(null, "I'm sorry you didn't enjoy yourself");
-		} else {
-			JOptionPane.showMessageDialog(null, "Ok then, I guess I will leave you alone.");
-
-		}
-
-		// gt.showHelp();
+		gt.showHelp();
 	}
 }
