@@ -60,8 +60,8 @@ public class TheBeginning {
 						+ " beers tonight" + "\n" + "This night has costed you $" + totalBeerCost + "\n"
 						+ "Is it cool if I call you " + nickName + " Dawg?"); 
 
- in	isThatOk = Integer.parseInt("are you ok?");
-  if 
+// in	isThatOk = Integer.parseInt("are you ok?");
+  //if 
 
 		gt.showHelp();
 	}
