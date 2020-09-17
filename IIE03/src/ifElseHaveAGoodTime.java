@@ -15,7 +15,9 @@ public class ifElseHaveAGoodTime {
 
 		
 		
-		gt.println(firstName , gender , age , monthYearBirth, loveIt);
+		gt.println(firstName);
+		gt.println( gender ) ;
+		gt.
 		
 
 		gt.showHelp();
