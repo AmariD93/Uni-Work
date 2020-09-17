@@ -11,7 +11,7 @@ public static void main (String[]args) {
 		
 		
 	if (a <= b) { 
-		gt.showMessageDialog(gt.addImageIcon("Cat.jpg"));
+		gt.showMessageDialog("Correct");
 		
 	}
 	else { 
