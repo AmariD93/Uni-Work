@@ -1,9 +1,0 @@
-public class HelloWorld {
-	public static void main(String[] args) {
-		GTerm gt = new GTerm(1280, 961);	
-		gt.println("Hello, My name is Daniel.");
-
-		//gt.showHelp();
-	}
-}
- 

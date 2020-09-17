@@ -1,8 +1,0 @@
-public class HelloWorld {
-	public static void main(String[] args) {
-		GTerm gt = new GTerm(1280, 961);	
-		gt.setIconImages(gt.getFilePath(C:\Users\Daniel\OneDrive\Desktop\Uni\ITP\Workspace\2020-09-04 IIE01));
-	
-		//gt.showHelp();
-	}
-}

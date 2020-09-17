@@ -1,6 +1,0 @@
-import java.awt.color.*;
-public class firstShot {
-	public static void main (String[] args) {
-		GTerm gt = new GTerm(600, 600);
-	}
-}
