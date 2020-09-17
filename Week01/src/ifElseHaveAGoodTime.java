@@ -3,23 +3,12 @@ public class ifElseHaveAGoodTime {
 		GTerm gt = new GTerm(600, 400);
 	
 				
+	
+		String userInput = gt.getInputString("Please enter each using a comma: First name,  ");
 		
-		/*
-					int b = 5;
-				
-					int a = Integer.parseInt(gt.getInputString("Enter a numerical Value lower than 5"));
-									
-				if (a <= b) { 
-					gt.showMessageDialog("Correct");
-					
-				}
-				else { 
-					gt.println("Wrong");
-				}
-				
-				
-		*/
 		
+	
+
 		
 		int a = Integer.parseInt(gt.getInputString("select a number betw 1 and 6"));
 		
