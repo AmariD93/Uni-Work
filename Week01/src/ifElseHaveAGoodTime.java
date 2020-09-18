@@ -10,28 +10,27 @@ public class ifElseHaveAGoodTime {
 
 		gt.setFontSize(18);
 
-	/*
-		  String userInput = gt.getInputString("Please enter each using a comma: First name, What is your Gender, How much do you have to spend?, How Much does each beer cost?, Do you have time?- Yes/No"
-		  );
-		  
-		  String [] studentInput = userInput.split(",");
-		  
-		  String userName = studentInput[0]; 
-		  char userGender = 
-		  int userFunds = Integer.parseInt(studentInput[2]); 
-		  double beerCost =Double.parseDouble(studentInput[3]); 
-		  boolean doYouHaveTime = Boolean.parseBoolean (studentInput[4]);
+		/*
+		 * String userInput = gt.
+		 * getInputString("Please enter each using a comma: First name, What is your Gender, How much do you have to spend?, How Much does each beer cost?, Do you have time?- Yes/No"
+		 * );
+		 * 
+		 * String [] studentInput = userInput.split(",");
+		 * 
+		 * String userName = studentInput[0]; char userGender = int userFunds =
+		 * Integer.parseInt(studentInput[2]); double beerCost
+		 * =Double.parseDouble(studentInput[3]); boolean doYouHaveTime =
+		 * Boolean.parseBoolean (studentInput[4]);
 		 */
 
 		gt.println("Oi!" + userName + "!");
 
 		// This if else statement shows a greeting depending on the gender of the user
 
-		if (userGender == 'M') {
+		if (userGender == 'M' || userGender == 'm') {
 			gt.println("How are you mate?");
 
-		}
-		else if (userGender == 'F') {
+		} else if (userGender == 'F' || userGender == 'f') {
 			gt.println("How are you Gurl!?");
 		}
 
@@ -46,8 +45,7 @@ public class ifElseHaveAGoodTime {
 
 		if (userFunds <= 10) {
 			gt.println("Oft! its doesn't looks like you have much money should you be drinking?");
-		}
-		else if (userFunds >= 10 && (userFunds <= 50)) {
+		} else if (userFunds >= 10 && (userFunds <= 50)) {
 			gt.println("You can definitely afford to have a few drinks with me.");
 		} else {
 			gt.println("Lucky you, you can drink all night with me.");
@@ -56,8 +54,7 @@ public class ifElseHaveAGoodTime {
 		double howMany = (userFunds / beerCost);
 
 		howMany = Math.round(howMany);
-		
-		
+
 		gt.println("You can have " + (howMany) + " drinks with me.");
 
 		gt.println("" + doYouHaveTime);
