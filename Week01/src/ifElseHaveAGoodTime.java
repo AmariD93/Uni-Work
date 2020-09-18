@@ -1,26 +1,26 @@
 public class ifElseHaveAGoodTime {
 	public static void main(String[] args) {
-		GTerm gt = new GTerm(600, 400);
+		GTerm gt = new GTerm(800, 400);
 
-		String userName = "Daniel";
+		String userName = "jeni";
 		char userGender = 'M';
-		int userFunds = 40;
-		double beerCost = 6.50;
+		int userFunds = 5;
+		double beerCost = 2.79;
 		boolean doYouHaveTime = true;
 
 		gt.setFontSize(18);
 
-		/*
-		 * String userInput = gt.
-		 * getInputString("Please enter each using a comma: First name, What is your Gender, How much do you have to spend?, How Much does each beer cost?, Do you have time?- Yes/No"
-		 * );
-		 * 
-		 * String [] studentInput = userInput.split(",");
-		 * 
-		 * String userName = studentInput[0]; char userGender = int userFunds =
-		 * Integer.parseInt(studentInput[2]); double beerCost =
-		 * Double.parseDouble(studentInput[3]); boolean doYouHaveTime =
-		 * Boolean.parseBoolean (studentInput[4]);
+	/*
+		  String userInput = gt.getInputString("Please enter each using a comma: First name, What is your Gender, How much do you have to spend?, How Much does each beer cost?, Do you have time?- Yes/No"
+		  );
+		  
+		  String [] studentInput = userInput.split(",");
+		  
+		  String userName = studentInput[0]; 
+		  char userGender = 
+		  int userFunds = Integer.parseInt(studentInput[2]); 
+		  double beerCost =Double.parseDouble(studentInput[3]); 
+		  boolean doYouHaveTime = Boolean.parseBoolean (studentInput[4]);
 		 */
 
 		gt.println("Oi!" + userName + "!");
@@ -31,7 +31,7 @@ public class ifElseHaveAGoodTime {
 			gt.println("How are you mate?");
 
 		}
-		if (userGender == 'F') {
+		else if (userGender == 'F') {
 			gt.println("How are you Gurl!?");
 		}
 
@@ -47,7 +47,7 @@ public class ifElseHaveAGoodTime {
 		if (userFunds <= 10) {
 			gt.println("Oft! its doesn't looks like you have much money should you be drinking?");
 		}
-		if (userFunds >= 10 && (userFunds <= 50)) {
+		else if (userFunds >= 10 && (userFunds <= 50)) {
 			gt.println("You can definitely afford to have a few drinks with me.");
 		} else {
 			gt.println("Lucky you, you can drink all night with me.");
