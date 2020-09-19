@@ -1,3 +1,5 @@
+import java.awt.Font;
+
 public class ifElseHaveAGoodTime {
 	public static void main(String[] args) {
 		GTerm gt = new GTerm(800, 400);
@@ -13,6 +15,7 @@ public class ifElseHaveAGoodTime {
 		
 		gt.setBackgroundColor(153, 0 ,153);
 		gt.setFontColor(0, 0, 0);
+		gt.setFontStyle(5);
 		gt.setFontSize(18);
 		
 		String userInput = gt.getInputString("Please enter each using a comma: First name, "
