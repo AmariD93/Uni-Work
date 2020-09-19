@@ -94,8 +94,6 @@ public class ifElseHaveAGoodTime {
 		gt.showMessageDialog(message);
 
 		
-		gt.setXY(0, 0);
-		gt.addImageIcon("Pub.jpg");
 
 		// gt.showHelp();
 	}
