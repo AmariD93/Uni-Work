@@ -1,37 +1,40 @@
 public class ifElseHaveAGoodTime {
 	public static void main(String[] args) {
 		GTerm gt = new GTerm(800, 400);
-
+/*
 		String userName = "jeni";
 		char userGender = 'M';
-		int userFunds = 5;
+		int userFunds = 100;
 		double beerCost = 2.79;
 		boolean doYouHaveTime = true;
-
+*/
+		
+		gt.addImageIcon()
 		gt.setFontSize(18);
 
-	/*
-		  String userInput = gt.getInputString("Please enter each using a comma: First name, What is your Gender, How much do you have to spend?, How Much does each beer cost?, Do you have time?- Yes/No"
-		  );
-		  
-		  String [] studentInput = userInput.split(",");
-		  
+	
+
+		  String userInput = gt.getInputString("Please enter each using a comma: First name, "
+		  		+ "What is your Gender, How much do you have to spend?, How Much does each beer cost?,"
+		  		+ " Do you have time?-true/false" );
+		  String [] studentInput = userInput.split(" , ");
+		  	  
 		  String userName = studentInput[0]; 
-		  char userGender = 
-		  int userFunds = Integer.parseInt(studentInput[2]); 
-		  double beerCost =Double.parseDouble(studentInput[3]); 
-		  boolean doYouHaveTime = Boolean.parseBoolean (studentInput[4]);
-		 */
+		  char userGender = studentInput[1].charAt(0);
+			int userFunds = Integer.parseInt(studentInput[2]);
+		  float beerCost =Float.parseFloat(studentInput[3]); 
+		  boolean doYouHaveTime = Boolean.parseBoolean(studentInput[4]);
+		
 
 		gt.println("Oi!" + userName + "!");
 
 		// This if else statement shows a greeting depending on the gender of the user
 
-		if (userGender == 'M') {
+		if (userGender == 'M' || userGender == 'm') {
 			gt.println("How are you mate?");
 
 		}
-		else if (userGender == 'F') {
+		else if (userGender == 'F' ||(userGender == 'f') ) {
 			gt.println("How are you Gurl!?");
 		}
 
@@ -40,9 +43,7 @@ public class ifElseHaveAGoodTime {
 		}
 
 		gt.println("How have you been? do you want to have a drink?");
-
-		// These line show use of if else use in Interger Variable to determine if the
-		// can afford to have some drinks with me.
+	
 
 		if (userFunds <= 10) {
 			gt.println("Oft! its doesn't looks like you have much money should you be drinking?");
@@ -50,35 +51,47 @@ public class ifElseHaveAGoodTime {
 		else if (userFunds >= 10 && (userFunds <= 50)) {
 			gt.println("You can definitely afford to have a few drinks with me.");
 		} else {
-			gt.println("Lucky you, you can drink all night with me.");
+			gt.println("Awesome, so your shout tonight?");
 		}
 
+	
 		double howMany = (userFunds / beerCost);
-
 		howMany = Math.round(howMany);
 		
+		if (howMany <= 1) {
+			gt.println("maybe you should get a cheaper drink.");
 		
-		gt.println("You can have " + (howMany) + " drinks with me.");
-
-		gt.println("" + doYouHaveTime);
-
-		/*
-		 * int a = Integer.parseInt(gt.getInputString("select a number betw 1 and 6"));
-		 * 
-		 * if (a == 1 ) { gt.println("Correct");
-		 * 
-		 * }if (a == 2) { gt.println("you");
-		 * 
-		 * }if (a == 3) { gt.println("smell");
-		 * 
-		 * }if (a == 4) { gt.println("really");
-		 * 
-		 * }if (a == 5) { gt.println("bad");
-		 * 
-		 * }if (a == 6) { gt.println("yey");
-		 * 
-		 * }
-		 */
+	 }
+		else if (howMany>=1 && (howMany<= 6)) {
+			gt.println("Nice we can hang out for a few hours.");
+		}
+		else {
+			gt.println("looks like we are going to be here all night.");
+		}
+		
+	 
+	 
+		if  (doYouHaveTime) {
+		gt.println("Nice, You have time");
+		}
+		else if  (!doYouHaveTime) {
+			gt.println("Sorry that you don't have time.");
+			}
+		else  {
+			gt.println("Sorry you have enter something wrong");
+		}
+		
+		
+		String message = " ";
+		message += ("First Name: " + userName + "\n");
+		message +=("Gender: " +  userGender + "\n");
+		message +=("You have: $" + userFunds + "\n");
+		message +=("Cost per drink: $" + beerCost + "\n");
+		message +=("You can have " +howMany + " beers.");
+		
+		gt.showMessageDialog(message);
+	
 		// gt.showHelp();
 	}
 }
+
