@@ -9,7 +9,7 @@ public class ifElseHaveAGoodTime {
 		boolean doYouHaveTime = true;
 */
 		
-		gt.addImageIcon()
+
 		gt.setFontSize(18);
 
 	
