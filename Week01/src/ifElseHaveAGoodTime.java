@@ -13,7 +13,7 @@ public class ifElseHaveAGoodTime {
 		 */
 		// Test Input -  Daniel, M, 43, 5.87, True
 		
-		gt.setBackgroundColor(153, 0 ,153);
+	
 		gt.setFontColor(0, 0, 0);
 		gt.setFontStyle(5);
 		gt.setFontSize(18);
@@ -93,6 +93,9 @@ public class ifElseHaveAGoodTime {
 		message += ("do you have time? " + doYouHaveTime );
 		gt.showMessageDialog(message);
 
+		
+		gt.setXY(0, 0);
+		gt.addImageIcon("Pub.jpg");
 
 		// gt.showHelp();
 	}
