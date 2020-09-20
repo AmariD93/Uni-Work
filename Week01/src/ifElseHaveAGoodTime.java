@@ -92,11 +92,7 @@ public class ifElseHaveAGoodTime {
 		message += ("do you have time? " + doYouHaveTime);
 		gt.showMessageDialog(message);
 
-<<<<<<< Updated upstream
-		
-
-=======
->>>>>>> Stashed changes
+	
 		// gt.showHelp();
 	}
 }
