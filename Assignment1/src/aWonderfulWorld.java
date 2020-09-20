@@ -106,20 +106,42 @@ public class aWonderfulWorld {
 			gt.setXY(0, 0);
 			gt.addImageIcon("lib/Cafe.png");
 			
+			// I am using integer as I am asking for a whole number from the player
+			// with a different output depending on the input using if statements
 			int wallet = Integer.parseInt(gt.getInputString("How much do you have?"));
 					
 			gt.clear();
-		
+		    gt.setFontSize(10);
+			gt.setXY(80	, 190);
+			gt.println("Coffee: $5.60  " + "\n" + 
+			"Milk: $3.00" + "\n" + 
+			"Slice: $8.90"+ "\n" + 
+			"Croissant: $4.50"+ "\n" + 
+			"Tea: $3.80"+ "\n");
+			 
+			
 			gt.setXY(80, 190);
 			gt.addImageIcon("lib/menuBox.png");
-			double coffee;
-			double croissant;
-			double slice;
-			double milk;
-			double tea;
+			
+			double coffeeCost = 5.60;
+			double croissantCost = 4.50;
+			double sliceCost = 8.90;
+			double milkCost = 3.00;
+			double teaCost = 3.80;
 				
 			gt.setXY(0, 0);
 			gt.addImageIcon("lib/Cafe.png");
+			
+			String allItems = gt.getInputString("Enter amount of items you want: Coffee, milk, croissant, slice, tea.");
+			
+			String[]perItem = allItems.split(", ");
+			int coffeeAmount = Integer.parseInt(perItem[0]);
+			int croissantAmount = Integer.parseInt(perItem[1]);
+			int sliceAmount = Integer.parseInt(perItem[2]);
+			int milkAmount = Integer.parseInt(perItem[3]);
+			int teaAmount =Integer.parseInt(perItem[4]);
+			
+			
 			
 			//gt.setXY(0, 0);
 			//gt.addImageIcon("lib/Cafe.png");
@@ -131,7 +153,7 @@ public class aWonderfulWorld {
 			gt.setXY(0, 0);
 			gt.addImageIcon("Cafe.png");
 		}
-		if (pathChoice == 'C' || (pathChoice == 'c' ) ) {
+		if (pathChoice == 'C' || (pathChoice == 'c' )) {
 			gt.clear();
 			
 			
@@ -166,6 +188,3 @@ public class aWonderfulWorld {
 		// gt.showHelp();
 	}
 }
-	
-
-
