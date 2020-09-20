@@ -29,9 +29,9 @@ public class aWonderfulWorld {
 	
 		//Create string to be defined by used input. As it is a name, an undefined amount of charcters and symbols 
 		//a String is the only option
-		String playerName;
+		String [] playerName;
 		playerName = gt.getInputString("What was your name?");
-		
+		playerName[0].toUpperCase() = playerName;
 		//This Code Block is used to refresh the page to display a new output,
 		// which uses the players input to greet them in playerName
 		{
@@ -52,7 +52,7 @@ public class aWonderfulWorld {
 		gt.addImageIcon("lib/woods.jpg");
 		
 		String pleaseHelp = gt.getInputString("Will you help me?");
-		pleaseHelp = pleaseHelp.trim().toLowerCase();
+		pleaseHelp = pleaseHelp.toLowerCase();
 
 		
 		
@@ -69,6 +69,10 @@ public class aWonderfulWorld {
 		
 		gt.println("I'm so happy that you can help me.");
 		
+		gt.setXY(510, 275);
+		gt.setFontSize(8);
+		gt.println("click to continue");
+		
 		gt.setXY(80, 190);
 		gt.addImageIcon("lib/dialogBox.png");
 		
@@ -77,6 +81,8 @@ public class aWonderfulWorld {
 		
 		gt.setXY(0, 0);
 		gt.addImageIcon("lib/woods.jpg");
+		
+		
 	}
 	
 	else if (pleaseHelp.equals("no"))
@@ -85,8 +91,11 @@ public class aWonderfulWorld {
 		gt.setFontSize(25);
 		gt.setFontColor(Color.white);
 		
-		gt.println("It will really help the kingdom." + "\n" + "are you sure?");
-		pleaseHelp = gt.getInputString("Will you help us?");
+		gt.println("It will really help the kingdom." + "\n" + "You should come " + playerName);
+		
+		gt.setXY(510, 275);
+		gt.setFontSize(8);
+		gt.println("click to continue");
 		
 		gt.setXY(80, 190);
 		gt.addImageIcon("lib/dialogBox.png");
@@ -96,35 +105,12 @@ public class aWonderfulWorld {
 		
 		gt.setXY(0, 0);
 		gt.addImageIcon("lib/woods.jpg");
-	}
-	 else 
-		 gt.clear();
-		gt.setXY(100,200);
-		gt.setFontSize(25);
-		gt.setFontColor(Color.white);
+		
 	
-		pleaseHelp = gt.getInputString("Try Again");
-		
-		gt.setXY(80, 190);
-		gt.addImageIcon("lib/dialogBox.png");
-		
-		gt.setXY(230,340);
-		gt.addImageIcon("lib/Frog.png");
-		
-		gt.setXY(0, 0);
-		gt.addImageIcon("lib/woods.jpg");
 	}
-		
-		
-		gt.setXY(80, 190);
-		gt.addImageIcon("lib/dialogBox.png");
-		
-		gt.setXY(230,340);
-		gt.addImageIcon("lib/Frog.png");
-		
-		gt.setXY(0, 0);
-		gt.addImageIcon("lib/woods.jpg");
-		
+	// else 
+	// {
+	}
 		
 		
 		// gt.showHelp();
