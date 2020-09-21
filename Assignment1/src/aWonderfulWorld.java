@@ -42,7 +42,9 @@ public class aWonderfulWorld {
 		gt.setFontSize(20);
 		gt.setFontColor(Color.white);
 		gt.println(
-				playerName + "! What a great name!" + "\n" + "Do you want to come on an" + "\n" + "adventure with me?");
+				playerName + "! What a great name!" + "\n" + "Do you want to come on an"
+		+ "\n" + "adventure with me?");
+		
 
 		gt.setXY(80, 190);
 		gt.addImageIcon("lib/dialogBox.png");
@@ -59,7 +61,7 @@ public class aWonderfulWorld {
 		// This code block is not checking for a Boolean variable from the the input the
 		// user gives us
 		// the output will be using an if else statement to determine the output message
-
+		
 		gt.clear();
 
 		if (pleaseHelp.equals("yes")) {
@@ -224,9 +226,9 @@ public class aWonderfulWorld {
 
 			gt.setXY(0, 0);
 			gt.addImageIcon("lib/woods.jpg");
-
+			
 		}
-
+		
 		// gt.showHelp();
 	}
 }
