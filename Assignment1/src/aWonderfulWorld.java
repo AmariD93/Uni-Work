@@ -43,8 +43,8 @@ public class aWonderfulWorld {
 		gt.setFontColor(Color.white);
 		gt.println(
 				playerName + "! What a great name!" + "\n" + "Do you want to come on an"
-		+ "\n" + "adventure with me?");
-		
+						+ "\n" + "adventure with me?");
+
 
 		gt.setXY(80, 190);
 		gt.addImageIcon("lib/dialogBox.png");
@@ -55,16 +55,47 @@ public class aWonderfulWorld {
 		gt.setXY(0, 0);
 		gt.addImageIcon("lib/woods.jpg");
 
-		String pleaseHelp = gt.getInputString("Will you hang out with me?");
-		pleaseHelp = pleaseHelp.toLowerCase();
+
 
 		// This code block is not checking for a Boolean variable from the the input the
 		// user gives us
 		// the output will be using an if else statement to determine the output message
-		
-		gt.clear();
+		String pleaseHelp;
+
+		do {
+			pleaseHelp = gt.getInputString("Will you hang out with me?");
+			pleaseHelp = pleaseHelp.toLowerCase();
+
+			if (pleaseHelp.equals("no")) {
+				gt.clear();
+				
+			gt.setXY(100, 200);
+			gt.setFontSize(20);
+			gt.setFontColor(Color.white);
+
+			gt.println("That's a shame" + "\n" + "Guess we will hang out next time " + playerName);
+
+			gt.setXY(80, 190);
+			gt.addImageIcon("lib/dialogBox.png");
+
+			gt.setXY(230, 340);
+			gt.addImageIcon("lib/Frog.png");
+
+			gt.setXY(0, 0);
+			gt.addImageIcon("lib/woods.jpg");	
+
+			gt.showMessageDialog("Let's try that again");
+		}
+		}
+
+		while (!pleaseHelp.equals("yes"));{
+
+		}
+
 
 		if (pleaseHelp.equals("yes")) {
+
+			gt.clear();
 			gt.setXY(100, 200);
 			gt.setFontSize(25);
 			gt.setFontColor(Color.white);
@@ -182,11 +213,11 @@ public class aWonderfulWorld {
 					gt.setXY(0, 0);
 					gt.addImageIcon("lib/Cafe.png");
 
-				
+
 				}
 
 			}
-			if (pathChoice == 'B' || (pathChoice == 'b')) {
+			else if (pathChoice == 'B' || (pathChoice == 'b')) {
 				gt.clear();
 
 				gt.setXY(95, 200);
@@ -202,162 +233,157 @@ public class aWonderfulWorld {
 
 				gt.setXY(0, 0);
 				gt.addImageIcon("lib/river.jpg");
-				
+
 				gt.showMessageDialog("Click OK to continue.");
-				
+
 				gt.clear();
-				
+
 				gt.setXY(95, 200);
 				gt.setFontSize(18);
 				gt.setFontColor(Color.white);
 				gt.println("Look at all the butterflies!\nThey are so pretty.\nHow many do you see?");
-				
-				
+
+
 				gt.setXY(80, 190);
 				gt.addImageIcon("lib/dialogBox.png");
 
 				gt.setXY(0,0);
 				gt.addImageIcon("lib/ButteryFlys.png");
-				
+
 				gt.setXY(350, 300);
 				gt.addImageIcon("lib/Frog.png");
 
 				gt.setXY(0, 0);
 				gt.addImageIcon("lib/river.jpg");
-				
+
 				//using Integer as the amount of butterflies as the only answers are whole numerical values
 				int butterFly = Integer.parseInt(gt.getInputString("How many butterflies are there?"));
-				
-				
-				
+
+
+
 				if(butterFly < 5 ) {
-					
+
 					gt.clear();
-					
+
 					gt.setXY(95, 200);
 					gt.setFontSize(18);
 					gt.setFontColor(Color.white);
 					gt.println("I think you may have missed some.\nThat's ok though.");
-					
+
 					gt.setXY(80, 190);
 					gt.addImageIcon("lib/dialogBox.png");
 
 					gt.setXY(0,0);
 					gt.addImageIcon("lib/ButteryFlys.png");
-					
+
 					gt.setXY(350, 300);
 					gt.addImageIcon("lib/Frog.png");
 
 					gt.setXY(0, 0);
 					gt.addImageIcon("lib/river.jpg");
-					
+
 					gt.showMessageDialog("Click ok to continue.");
-					
-					
+
+
 					gt.clear();
-					
+
 					gt.setXY(95, 200);
 					gt.setFontSize(18);
 					gt.setFontColor(Color.white);
 					gt.println("Let's try and catch some.");
-					
+
 					gt.setXY(80, 190);
 					gt.addImageIcon("lib/dialogBox.png");
 
 					gt.setXY(0,0);
 					gt.addImageIcon("lib/ButteryFlys.png");
-					
+
 					gt.setXY(350, 300);
 					gt.addImageIcon("lib/Frog.png");
 
 					gt.setXY(0, 0);
 					gt.addImageIcon("lib/river.jpg");
-					
+
 					gt.showMessageDialog("Click to continue");
-						
-							gt.clear();
-							
-							gt.setXY(95, 200);
-							gt.setFontSize(18);
-							gt.setFontColor(Color.white);
-							gt.println("They are too fast. Now I'm tired. \nI think I might need a nap. \nSee you next time " + playerName);
-							
-							
-							gt.setXY(80, 190);
-							gt.addImageIcon("lib/dialogBox.png");
 
-							gt.setXY(0,0);
-							gt.addImageIcon("lib/ButteryFlys.png");
-							
-							gt.setXY(350, 300);
-							gt.addImageIcon("lib/Frog.png");
+					gt.clear();
 
-							gt.setXY(0, 0);
-							gt.addImageIcon("lib/river.jpg");
-							
-							gt.showMessageDialog("Goodbye");
-							
-							gt.close();
-				
+					gt.setXY(95, 200);
+					gt.setFontSize(18);
+					gt.setFontColor(Color.white);
+					gt.println("They are too fast. Now I'm tired. \nI think I might need a nap. \nSee you next time " + playerName);
+
+
+					gt.setXY(80, 190);
+					gt.addImageIcon("lib/dialogBox.png");
+
+					gt.setXY(0,0);
+					gt.addImageIcon("lib/ButteryFlys.png");
+
+					gt.setXY(350, 300);
+					gt.addImageIcon("lib/Frog.png");
+
+					gt.setXY(0, 0);
+					gt.addImageIcon("lib/river.jpg");
+
+					gt.showMessageDialog("Goodbye");
+
+					gt.close();
+
 				}
-				
+
 				if (butterFly == 5) {
-					
+
 					gt.setXY(95, 200);
 					gt.setFontSize(18);
 					gt.setFontColor(Color.white);
 					gt.println("Wow! You got that right.\n Let's try and catch some.");
-					
-					
+
+
 					gt.setXY(80, 190);
 					gt.addImageIcon("lib/dialogBox.png");
 
 					gt.setXY(0,0);
 					gt.addImageIcon("lib/ButteryFlys.png");
-					
+
 					gt.setXY(350, 300);
 					gt.addImageIcon("lib/Frog.png");
 
 					gt.setXY(0, 0);
 					gt.addImageIcon("lib/river.jpg");
-						
+
 					gt.showMessageDialog("Click to continue");
-						
-							gt.clear();
-							
-							gt.setXY(95, 200);
-							gt.setFontSize(18);
-							gt.setFontColor(Color.white);
-							gt.println("They are too fast. Now I'm tired. \nI think I might need a nap. \nSee you next time " + playerName);
-							
-							
-							gt.setXY(80, 190);
-							gt.addImageIcon("lib/dialogBox.png");
 
-							gt.setXY(0,0);
-							gt.addImageIcon("lib/ButteryFlys.png");
-							
-							gt.setXY(350, 300);
-							gt.addImageIcon("lib/Frog.png");
+					gt.clear();
 
-							gt.setXY(0, 0);
-							gt.addImageIcon("lib/river.jpg");
-							
-							gt.showMessageDialog("Goodbye");
-							
-							gt.close();
+					gt.setXY(95, 200);
+					gt.setFontSize(18);
+					gt.setFontColor(Color.white);
+					gt.println("They are too fast. Now I'm tired. \nI think I might need a nap. \nSee you next time " + playerName);
+
+
+					gt.setXY(80, 190);
+					gt.addImageIcon("lib/dialogBox.png");
+
+					gt.setXY(0,0);
+					gt.addImageIcon("lib/ButteryFlys.png");
+
+					gt.setXY(350, 300);
+					gt.addImageIcon("lib/Frog.png");
+
+					gt.setXY(0, 0);
+					gt.addImageIcon("lib/river.jpg");
+
+					gt.showMessageDialog("Goodbye");
+
+					gt.close();
 				}
-					
-			
-				
-				
-				
-				
-				
+
+
 			}
-			
-			
-			if (pathChoice == 'C' || (pathChoice == 'c')) {
+
+
+			else if (pathChoice == 'C' || (pathChoice == 'c')) {
 				gt.clear();
 
 				gt.setXY(0, 0);
@@ -366,24 +392,6 @@ public class aWonderfulWorld {
 
 		}
 
-		else if (pleaseHelp.equals("no")) {
-			gt.setXY(100, 200);
-			gt.setFontSize(20);
-			gt.setFontColor(Color.white);
-
-			gt.println("That's a shame" + "\n" + "Guess we will hang out next time " + playerName);
-
-			gt.setXY(80, 190);
-			gt.addImageIcon("lib/dialogBox.png");
-
-			gt.setXY(230, 340);
-			gt.addImageIcon("lib/Frog.png");
-
-			gt.setXY(0, 0);
-			gt.addImageIcon("lib/woods.jpg");
-			
-		}
-		
-		// gt.showHelp();
 	}
 }
+
