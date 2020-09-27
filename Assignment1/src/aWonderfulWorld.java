@@ -368,10 +368,33 @@ public class aWonderfulWorld {
 
 			else if (pathChoice == 'C' || (pathChoice == 'c')) {
 				gt.clear();
-
+				gt.setXY(80, 190);
+				gt.println("What a wonderful day to be at the beach. \nDo you want to build a sand castle?");
+				
 				gt.setXY(80, 190);
 				gt.addImageIcon("lib/dialogBox.png");
+				
+				gt.setXY(0, 0);
+				gt.addImageIcon("lib/beach.jpg");
 
+				String animal = gt.getInputString("Pick from:Elephant, ");
+				
+				if (animal.equalsIgnoreCase("elephant")) {
+					
+					gt.clear();
+					
+					gt.setXY(400, 300);
+					gt.addImageIcon("lib/dumbo.png");
+					gt.setXY(0, 0);
+					gt.addImageIcon("lib/beach.jpg");
+					
+				}
+				
+				
+				
+				
+				
+				
 			}
 
 		}
