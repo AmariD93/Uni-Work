@@ -42,9 +42,7 @@ public class aWonderfulWorld {
 		gt.setFontSize(20);
 		gt.setFontColor(Color.white);
 		gt.println(
-				playerName + "! What a great name!" + "\n" + "Do you want to come on an"
-						+ "\n" + "adventure with me?");
-
+				playerName + "! What a great name!" + "\n" + "Do you want to come on an" + "\n" + "adventure with me?");
 
 		gt.setXY(80, 190);
 		gt.addImageIcon("lib/dialogBox.png");
@@ -54,8 +52,6 @@ public class aWonderfulWorld {
 
 		gt.setXY(0, 0);
 		gt.addImageIcon("lib/woods.jpg");
-
-
 
 		// This code block is not checking for a Boolean variable from the the input the
 		// user gives us
@@ -68,30 +64,27 @@ public class aWonderfulWorld {
 
 			if (pleaseHelp.equals("no")) {
 				gt.clear();
-				
-			gt.setXY(100, 200);
-			gt.setFontSize(20);
-			gt.setFontColor(Color.white);
 
-			gt.println("That's a shame" + "\n" + "Guess we will hang out next time " + playerName);
+				gt.setXY(100, 200);
+				gt.setFontSize(20);
+				gt.setFontColor(Color.white);
 
-			gt.setXY(80, 190);
-			gt.addImageIcon("lib/dialogBox.png");
+				gt.println("That's a shame" + "\n" + "Are you sure  " + playerName);
 
-			gt.setXY(230, 340);
-			gt.addImageIcon("lib/Frog.png");
+				gt.setXY(80, 190);
+				gt.addImageIcon("lib/dialogBox.png");
 
-			gt.setXY(0, 0);
-			gt.addImageIcon("lib/woods.jpg");	
+				gt.setXY(230, 340);
+				gt.addImageIcon("lib/Frog.png");
 
-			gt.showMessageDialog("Let's try that again");
-		}
-		}
+				gt.setXY(0, 0);
+				gt.addImageIcon("lib/woods.jpg");
 
-		while (!pleaseHelp.equals("yes"));{
-
+				gt.showMessageDialog("Let's try that again");
+			}
 		}
 
+		while (!pleaseHelp.equals("yes"));
 
 		if (pleaseHelp.equals("yes")) {
 
@@ -139,15 +132,23 @@ public class aWonderfulWorld {
 				// I am using integer as I am asking for a whole number from the player
 				// with a different output depending on the input using if statements
 				int wallet = Integer.parseInt(gt.getInputString("How much do you have?"));
+				gt.clear();
 
 				// Setting up for an arithmatic if statement by using use input.
-				gt.clear();
-				gt.setFontSize(10);
-				gt.setXY(80, 190);
+				// this is the final step to this part of the program which takes the users
+				// Integer input for "wallet"
+				// and checks whether or not the value of the food is greater or less than the
+				// wallet input
+
+				gt.setXY(300, 100);
+				gt.println("MENU");
+
+				gt.setFontSize(15);
+				gt.setXY(200, 150);
 				gt.println("Coffee: $5.60  " + "\n" + "Milk: $3.00" + "\n" + "Slice: $8.90" + "\n" + "Croissant: $4.50"
 						+ "\n" + "Tea: $3.80" + "\n");
 
-				gt.setXY(80, 190);
+				gt.setXY(200, 100);
 				gt.addImageIcon("lib/menuBox.png");
 
 				gt.setXY(0, 0);
@@ -159,34 +160,53 @@ public class aWonderfulWorld {
 				double sliceCost = 8.90;
 				double milkCost = 3.00;
 				double teaCost = 3.80;
+				String allItems;
+				double total;
 
-				String allItems = gt
-						.getInputString("Enter amount of items you want: Coffee, milk, croissant, slice, tea.");
-				// Using String variable to split user input, then convert to Integer
-				// as I'm asking the user to input whole number
-				String[] perItem = allItems.split(",");
-				int coffeeAmount = Integer.parseInt(perItem[0]);
-				int croissantAmount = Integer.parseInt(perItem[1]);
-				int sliceAmount = Integer.parseInt(perItem[2]);
-				int milkAmount = Integer.parseInt(perItem[3]);
-				int teaAmount = Integer.parseInt(perItem[4]);
+				do {
+					allItems = gt
+							.getInputString("Enter amount of items you want: Coffee, milk, croissant, slice, tea.");
 
-				// Creating another double as this step involes arithmatic where the double
-				// variables
-				// are multiplied by the user input integers
-				double coffeeTotal = coffeeAmount * coffeeCost;
-				double croissantTotal = croissantAmount * croissantCost;
-				double sliceTotal = sliceAmount * sliceCost;
-				double milkTotal = milkAmount * milkCost;
-				double teaTotal = teaAmount * teaCost;
-				double Total = coffeeTotal + croissantTotal + sliceTotal + milkTotal + teaTotal;
+					// Using String variable to split user input, then convert to Integer
+					// as I'm asking the user to input whole number
+					String[] perItem = allItems.split(",");
+					int coffeeAmount = Integer.parseInt(perItem[0]);
+					int croissantAmount = Integer.parseInt(perItem[1]);
+					int sliceAmount = Integer.parseInt(perItem[2]);
+					int milkAmount = Integer.parseInt(perItem[3]);
+					int teaAmount = Integer.parseInt(perItem[4]);
 
-				gt.clear();
-				// this is the final step to this part of the program which takes the users
-				// Integer input for "wallet"
-				// and checks whether or not the value of the food is greater or less than the
-				// wallet input
-				if (Total <= wallet) {
+					// Creating another double as this step involes arithmatic where the double
+					// variables
+					// are multiplied by the user input integers
+					double coffeeTotal = coffeeAmount * coffeeCost;
+					double croissantTotal = croissantAmount * croissantCost;
+					double sliceTotal = sliceAmount * sliceCost;
+					double milkTotal = milkAmount * milkCost;
+					double teaTotal = teaAmount * teaCost;
+					total = coffeeTotal + croissantTotal + sliceTotal + milkTotal + teaTotal;
+
+					gt.clear();
+
+					if (total > wallet) {
+
+						gt.setXY(95, 200);
+						gt.setFontSize(18);
+						gt.setFontColor(Color.white);
+						gt.println("Oops! Looks like you don't have enough");
+						gt.println("Lets get out of here");
+						gt.setXY(80, 190);
+						gt.addImageIcon("lib/dialogBox.png");
+
+						gt.setXY(0, 0);
+						gt.addImageIcon("lib/Cafe.png");
+
+						gt.showMessageDialog("Maybe get less items.");
+					}
+
+				} while (total > wallet);
+
+				if (total <= wallet) {
 					gt.setXY(95, 200);
 					gt.setFontSize(18);
 					gt.setFontColor(Color.white);
@@ -198,26 +218,9 @@ public class aWonderfulWorld {
 
 					gt.setXY(0, 0);
 					gt.addImageIcon("lib/Cafe.png");
-
-				}
-				if (Total >= wallet) {
-
-					gt.setXY(95, 200);
-					gt.setFontSize(18);
-					gt.setFontColor(Color.white);
-					gt.println("Oops! Looks like you don't have enough");
-					gt.println("Lets get out of here");
-					gt.setXY(80, 190);
-					gt.addImageIcon("lib/dialogBox.png");
-
-					gt.setXY(0, 0);
-					gt.addImageIcon("lib/Cafe.png");
-
-
 				}
 
-			}
-			else if (pathChoice == 'B' || (pathChoice == 'b')) {
+			} else if (pathChoice == 'B' || (pathChoice == 'b')) {
 				gt.clear();
 
 				gt.setXY(95, 200);
@@ -243,11 +246,10 @@ public class aWonderfulWorld {
 				gt.setFontColor(Color.white);
 				gt.println("Look at all the butterflies!\nThey are so pretty.\nHow many do you see?");
 
-
 				gt.setXY(80, 190);
 				gt.addImageIcon("lib/dialogBox.png");
 
-				gt.setXY(0,0);
+				gt.setXY(0, 0);
 				gt.addImageIcon("lib/ButteryFlys.png");
 
 				gt.setXY(350, 300);
@@ -256,94 +258,77 @@ public class aWonderfulWorld {
 				gt.setXY(0, 0);
 				gt.addImageIcon("lib/river.jpg");
 
-				//using Integer as the amount of butterflies as the only answers are whole numerical values
-				int butterFly = Integer.parseInt(gt.getInputString("How many butterflies are there?"));
+				// using Integer as the amount of butterflies as the only answers are whole
+				// numerical values
 
+				int butterFly;
 
+				do {
+					butterFly = Integer.parseInt(gt.getInputString("How many butterflies are there?"));
 
-				if(butterFly < 5 ) {
+					if (butterFly < 6) {
+
+						gt.clear();
+
+						gt.setXY(95, 200);
+						gt.setFontSize(18);
+						gt.setFontColor(Color.white);
+						gt.println("I think you may have missed some.\nThat's ok though.");
+
+						gt.setXY(80, 190);
+						gt.addImageIcon("lib/dialogBox.png");
+
+						gt.setXY(0, 0);
+						gt.addImageIcon("lib/ButteryFlys.png");
+
+						gt.setXY(350, 300);
+						gt.addImageIcon("lib/Frog.png");
+
+						gt.setXY(0, 0);
+						gt.addImageIcon("lib/river.jpg");
+
+						gt.showMessageDialog("Do you want to try again?");
+					}
+
+					if (butterFly > 6) {
+
+						gt.clear();
+
+						gt.setXY(95, 200);
+						gt.setFontSize(18);
+						gt.setFontColor(Color.white);
+						gt.println("Oh no, some of those aren't butterflies.\nThat's ok though.");
+
+						gt.setXY(80, 190);
+						gt.addImageIcon("lib/dialogBox.png");
+
+						gt.setXY(0, 0);
+						gt.addImageIcon("lib/ButteryFlys.png");
+
+						gt.setXY(350, 300);
+						gt.addImageIcon("lib/Frog.png");
+
+						gt.setXY(0, 0);
+						gt.addImageIcon("lib/river.jpg");
+
+						gt.showMessageDialog("Do you want to try again?");
+					}
+
+				} while (butterFly != 6);
+
+				if (butterFly == 6) {
 
 					gt.clear();
-
-					gt.setXY(95, 200);
-					gt.setFontSize(18);
-					gt.setFontColor(Color.white);
-					gt.println("I think you may have missed some.\nThat's ok though.");
-
-					gt.setXY(80, 190);
-					gt.addImageIcon("lib/dialogBox.png");
-
-					gt.setXY(0,0);
-					gt.addImageIcon("lib/ButteryFlys.png");
-
-					gt.setXY(350, 300);
-					gt.addImageIcon("lib/Frog.png");
-
-					gt.setXY(0, 0);
-					gt.addImageIcon("lib/river.jpg");
-
-					gt.showMessageDialog("Click ok to continue.");
-
-
-					gt.clear();
-
-					gt.setXY(95, 200);
-					gt.setFontSize(18);
-					gt.setFontColor(Color.white);
-					gt.println("Let's try and catch some.");
-
-					gt.setXY(80, 190);
-					gt.addImageIcon("lib/dialogBox.png");
-
-					gt.setXY(0,0);
-					gt.addImageIcon("lib/ButteryFlys.png");
-
-					gt.setXY(350, 300);
-					gt.addImageIcon("lib/Frog.png");
-
-					gt.setXY(0, 0);
-					gt.addImageIcon("lib/river.jpg");
-
-					gt.showMessageDialog("Click to continue");
-
-					gt.clear();
-
-					gt.setXY(95, 200);
-					gt.setFontSize(18);
-					gt.setFontColor(Color.white);
-					gt.println("They are too fast. Now I'm tired. \nI think I might need a nap. \nSee you next time " + playerName);
-
-
-					gt.setXY(80, 190);
-					gt.addImageIcon("lib/dialogBox.png");
-
-					gt.setXY(0,0);
-					gt.addImageIcon("lib/ButteryFlys.png");
-
-					gt.setXY(350, 300);
-					gt.addImageIcon("lib/Frog.png");
-
-					gt.setXY(0, 0);
-					gt.addImageIcon("lib/river.jpg");
-
-					gt.showMessageDialog("Goodbye");
-
-					gt.close();
-
-				}
-
-				if (butterFly == 5) {
 
 					gt.setXY(95, 200);
 					gt.setFontSize(18);
 					gt.setFontColor(Color.white);
 					gt.println("Wow! You got that right.\n Let's try and catch some.");
 
-
 					gt.setXY(80, 190);
 					gt.addImageIcon("lib/dialogBox.png");
 
-					gt.setXY(0,0);
+					gt.setXY(0, 0);
 					gt.addImageIcon("lib/ButteryFlys.png");
 
 					gt.setXY(350, 300);
@@ -359,13 +344,13 @@ public class aWonderfulWorld {
 					gt.setXY(95, 200);
 					gt.setFontSize(18);
 					gt.setFontColor(Color.white);
-					gt.println("They are too fast. Now I'm tired. \nI think I might need a nap. \nSee you next time " + playerName);
-
+					gt.println("They are too fast. Now I'm tired. \nI think I might need a nap. \nSee you next time "
+							+ playerName);
 
 					gt.setXY(80, 190);
 					gt.addImageIcon("lib/dialogBox.png");
 
-					gt.setXY(0,0);
+					gt.setXY(0, 0);
 					gt.addImageIcon("lib/ButteryFlys.png");
 
 					gt.setXY(350, 300);
@@ -374,24 +359,22 @@ public class aWonderfulWorld {
 					gt.setXY(0, 0);
 					gt.addImageIcon("lib/river.jpg");
 
-					gt.showMessageDialog("Goodbye");
+					gt.showMessageDialog("Thank you for playing.");
 
 					gt.close();
 				}
 
-
 			}
-
 
 			else if (pathChoice == 'C' || (pathChoice == 'c')) {
 				gt.clear();
 
-				gt.setXY(0, 0);
-				gt.addImageIcon("lib/river.jpg");
+				gt.setXY(80, 190);
+				gt.addImageIcon("lib/dialogBox.png");
+
 			}
 
 		}
 
 	}
 }
-
