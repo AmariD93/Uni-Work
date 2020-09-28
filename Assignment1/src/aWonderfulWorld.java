@@ -218,6 +218,9 @@ public class aWonderfulWorld {
 
 					gt.setXY(0, 0);
 					gt.addImageIcon("lib/Cafe.png");
+					
+					gt.showMessageDialog("Thank you for playing");
+					gt.close();
 				}
 
 			} else if (pathChoice == 'B' || (pathChoice == 'b')) {
@@ -369,32 +372,72 @@ public class aWonderfulWorld {
 			else if (pathChoice == 'C' || (pathChoice == 'c')) {
 				gt.clear();
 				gt.setXY(80, 190);
-				gt.println("What a wonderful day to be at the beach. \nDo you want to build a sand castle?");
-				
+				gt.println("What a wonderful day to be at the beach. \nDo you want to build something in the sand?");
 				gt.setXY(80, 190);
 				gt.addImageIcon("lib/dialogBox.png");
-				
 				gt.setXY(0, 0);
 				gt.addImageIcon("lib/beach.jpg");
+				String animal;
 
-				String animal = gt.getInputString("Pick from:Elephant, ");
-				
-				if (animal.equalsIgnoreCase("elephant")) {
-					
+				animal = gt.getInputString("Pick from: Elephant, Horse or Lion ");
+				animal = animal.toLowerCase();
+
+				if (animal == ("elephant")) {
+
 					gt.clear();
+					gt.setXY(80, 190);
+					gt.println("Wow, " + playerName + ". That elephant looks great!" +"\nI think I've been out enough for today.\nTime to go home!");
 					
+					gt.setXY(80, 190);
+					gt.addImageIcon("lib/dialogBox.png");
+
 					gt.setXY(400, 300);
 					gt.addImageIcon("lib/dumbo.png");
+
 					gt.setXY(0, 0);
 					gt.addImageIcon("lib/beach.jpg");
 					
+					gt.showMessageDialog("Thank you for playing");
+					gt.close();
 				}
-				
-				
-				
-				
-				
-				
+
+				if (animal.equals("horse")) {
+
+					gt.clear();
+					gt.setXY(80, 190);
+					gt.println("Wow, " + playerName + ". That horse looks great!" +"\nI think I've been out enough for today.\nTime to go home!");
+					gt.setXY(80, 190);
+					gt.addImageIcon("lib/dialogBox.png");
+					
+					gt.setXY(400, 300);
+					gt.addImageIcon("lib/horse.png");
+
+					gt.setXY(0, 0);
+					gt.addImageIcon("lib/beach.jpg");
+					gt.showMessageDialog("Thank you for playing");
+					gt.close();
+
+				}
+				if (animal.equals("lion")) {
+
+					gt.clear();
+
+					gt.setXY(80, 190);
+					gt.println("Wow, " + playerName + ". That lion looks great!" +"\nI think I've been out enough for today.\nTime to go home!");
+					gt.setXY(80, 190);
+					gt.addImageIcon("lib/dialogBox.png");
+					
+					gt.setXY(400, 300);
+					gt.addImageIcon("lib/lion.png");
+
+					gt.setXY(0, 0);
+					gt.addImageIcon("lib/beach.jpg");
+					gt.showMessageDialog("Thank you for playing");
+					gt.close();
+
+					
+				}
+
 			}
 
 		}
