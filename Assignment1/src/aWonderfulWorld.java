@@ -127,7 +127,7 @@ public class aWonderfulWorld {
 				gt.addImageIcon("lib/dialogBox.png");
 
 				gt.setXY(0, 0);
-				gt.addImageIcon("lib/Cafe.png");
+				gt.addImageIcon("lib/cafe.jpg");
 
 				// I am using integer as I am asking for a whole number from the player
 				// with a different output depending on the input using if statements
@@ -152,7 +152,7 @@ public class aWonderfulWorld {
 				gt.addImageIcon("lib/menuBox.png");
 
 				gt.setXY(0, 0);
-				gt.addImageIcon("lib/Cafe.png");
+				gt.addImageIcon("lib/cafe.jpg");
 
 				// creating double vairables as the cafe prices dollar and cent value
 				double coffeeCost = 5.60;
@@ -199,7 +199,7 @@ public class aWonderfulWorld {
 						gt.addImageIcon("lib/dialogBox.png");
 
 						gt.setXY(0, 0);
-						gt.addImageIcon("lib/Cafe.png");
+						gt.addImageIcon("lib/cafe.jpg");
 
 						gt.showMessageDialog("Maybe get less items.");
 					}
@@ -217,7 +217,7 @@ public class aWonderfulWorld {
 					gt.addImageIcon("lib/dialogBox.png");
 
 					gt.setXY(0, 0);
-					gt.addImageIcon("lib/Cafe.png");
+					gt.addImageIcon("lib/cafe.jpg");
 					
 					gt.showMessageDialog("Thank you for playing");
 					gt.close();
