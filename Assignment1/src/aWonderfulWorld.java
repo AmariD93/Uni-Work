@@ -12,7 +12,25 @@ public class aWonderfulWorld {
 		gt.setFontColor(Color.white);
 
 		// Print line String greeting
-		String greeting = "Hey, you there!" + "\n" + "Will you tell me your name?";
+		gt.println("Hey there, My name is Freddy!\nI'm just hanging around today\nwith nothing to do.");
+
+		// Set a dialog box so that text can be seen clearly
+		gt.setXY(80, 200);
+		gt.addImageIcon("lib/dialogBox.png");
+
+		// Setting XY for guide "frog.png
+		gt.setXY(230, 340);
+		gt.addImageIcon("lib/Frog.png");
+
+		// setXY for background image
+		gt.setXY(0, 0);
+		gt.addImageIcon("lib/woods.jpg");
+		
+		gt.showMessageDialog("Press Ok to continue");
+		gt.clear();
+		
+		gt.setXY(100, 200);
+		String greeting = "You look like fun to be around" + "\n" + "Will you tell me your name?";
 		gt.println(greeting);
 
 		// Set a dialog box so that text can be seen clearly
