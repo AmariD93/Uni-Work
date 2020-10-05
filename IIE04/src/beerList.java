@@ -18,7 +18,7 @@ public class beerList {
 		int beerStock;
 		double beerCost;
 		boolean beerGood;
-		
+		//save
 		
 		int beerNumber =Integer.parseInt(gt.getInputString("How many beers do you want to review?"));
 		int stop = 0;
