@@ -18,14 +18,9 @@ public class beerList {
 		int beerStock = 0;
 		double beerCost;
 		boolean beerGood;
-<<<<<<< HEAD
-		test test
-		
+
 		//intitialistion of Integer vairable and user input for how many times this program loops
-=======
-		//save
-		
->>>>>>> branch 'master' of https://github.com/AmariD93/Uni-Work.git
+
 		int beerNumber =Integer.parseInt(gt.getInputString("How many beers do you want to review?"));
 		int stop = 0;
 		//initilising while method using Integer variables created
@@ -57,7 +52,7 @@ public class beerList {
 			while(!beerGood)
 				beerGood = Boolean.parseBoolean(gt.getInputString("If you haven't Drank the beer what are you rating is. Please enter true to continue"));
 			
-		// using string variable to creat message output	 
+		// using string variable to create message output	 
 		String message = beerName + ", " +  beerScore +", " + 
 			beerStock + ", " + beerCost + ", " + beerGood;
 		gt.println(message);
