@@ -19,7 +19,7 @@ public class beerList {
 		double beerCost;
 		boolean beerGood;
 <<<<<<< HEAD
-		
+		test
 		//intitialistion of Integer vairable and user input for how many times this program loops
 =======
 		//save
