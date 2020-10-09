@@ -66,5 +66,6 @@ public class beerList {
 		
 		gt.println("your stock average is " + stockAverage);
 		// gt.showHelp();
+		sup
 	}
 }
