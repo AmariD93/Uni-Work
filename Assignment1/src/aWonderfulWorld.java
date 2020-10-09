@@ -400,7 +400,7 @@ public class aWonderfulWorld {
 				animal = gt.getInputString("Pick from: Elephant, Horse or Lion ");
 				animal = animal.toLowerCase();
 
-				if (animal == ("elephant")) {
+				if (animal.equals("elephant")) {
 
 					gt.clear();
 					gt.setXY(80, 190);
