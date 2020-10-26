@@ -48,12 +48,7 @@ public class BeerTracker {
 
 		this.beerNumberMax = (gt.getInputString("How many beers do you want to review(Integer)?"));
 
-		while (beerNumberMax.isEmpty()) {
-			this.beerNumberMax = gt.getInputString("please enter number of inputs");
-			if (this.beerNumberMax != null)
-				this.beerNumber = Integer.parseInt(this.beerNumberMax);
-
-		}
+		
 		if (beerNumberMax != null) {
 
 			this.beerNumber = Integer.parseInt(this.beerNumberMax);
