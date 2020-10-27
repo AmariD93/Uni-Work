@@ -33,27 +33,39 @@ private int j;
 
 	public BeerTracker() {
 
-		this.gt = new GTerm(406, 400);
-		this.gt.setBackgroundColor(Color.white);
-		this.gt.setFontStyle(5);
-		this.gt.setFontColor(Color.black);
-		this.gt.setFontSize(18);
+		this.gt = new GTerm(700, 350);
 
 		gt.addTable(400, 300, "Beer name\tRating\tStock\tCost\tIndex");
 		this.gt.println("");
 
-		this.gt.addTextField("", 100);
-		this.gt.addTextField("", 100);
-		this.gt.addTextField("", 100);
+		this.gt.setBackgroundColor(Color.white);
+		this.gt.setFontColor(Color.BLACK);
+		
+		this.gt.setXY(420, 0);
+		
+		this.gt.println("Beer Name");
+		this.gt.addTextField("", 150);
+		this.gt.println("");
+		
+		this.gt.println("Rating");
+		this.gt.addTextField("", 150);
+		this.gt.println("");
+		
+		this.gt.println("Stock");
+		this.gt.addTextField("", 150);
+		this.gt.println("");
+
 		this.gt.println("");
 		this.gt.addButton("Add", this, "addRecord");
 		this.gt.addButton("More info", this, "moreInfo");
 		this.gt.addButton("Close", this, "close");
+		this.gt.println("");
 		this.gt.addButton("Add more Records",this,"moreRecords");
 		this.gt.println("");
 		this.beerNumber = 0;
 		this.j=0;
 		this.counter = 0;
+		
 		
 		this.beerNumberMax = (gt.getInputString("How many beers do you want to review(Integer)?"));
 
@@ -79,10 +91,7 @@ private int j;
 	}
 
 	public void addRecord() {
-		// this.minArrayIndex = 0;
-		
-		
-		// this.sumC = 0;
+
 	
 
 		if (this.counter < this.beerNumber) {
@@ -113,6 +122,11 @@ private int j;
 			this.j++;
 			clearTextField();
 		}
+		
+	}
+	
+	public void moreRecords() {
+		
 		
 	}
 	public void clearTextField() {
