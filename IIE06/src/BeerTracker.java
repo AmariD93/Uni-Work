@@ -11,11 +11,11 @@ public class BeerTracker {
 	private int beerNumber;
 
 	// Variable containers for user input
-	private String beerName;
-	private char beerScore;
-	private int beerStock;
-	private double beerCost;
-	private boolean beerGood;
+	private String[] beerName;
+	private char[] beerScore;
+	private int[] beerStock;
+	private double[] beerCost;
+	private boolean[] beerGood;
 	
 	private double costAverage;
 	private String lowestBeer;
@@ -46,6 +46,7 @@ public class BeerTracker {
 		this.gt.setFontStyle(5);
 		this.gt.setFontColor(Color.black);
 		this.gt.setFontSize(18);
+		this.beerNumber= 0;
 		this.j = 0;
 		this.minArrayIndex = 0;
 		this.sumC = 0;
@@ -81,6 +82,8 @@ public class BeerTracker {
 
 			this.beerNumber = Integer.parseInt(this.beerNumberMax);
 
+			
+			
 			this.beerNames = new String[this.beerNumber];
 			this.beerScores = new char[this.beerNumber];
 			this.beersStock = new int[this.beerNumber];
@@ -88,11 +91,10 @@ public class BeerTracker {
 			this.beersGood = new boolean[this.beerNumber];
 		}
 
-		else {
-			this.gt.showErrorDialog("User has Cancelled");
-		}
+	
 		while (this.counter < this.beerNumber) {
 			addRecord();
+			this.counter++;
 		}
 	}
 
@@ -100,28 +102,34 @@ public class BeerTracker {
 
 
 		while (this.counter < this.beerNumber) {
+			this.beerName = new String[this.beerNumber];
+			this.beerScore = new char[this.beerNumber];
+			this.beerStock = new int[this.beerNumber];
+			this.beerCost = new double[this.beerNumber];
+			this.beerGood = new boolean[this.beerNumber];
 			
-			this.beerName = this.gt.getTextFromEntry(this.textField0);
-			this.beerScore = this.gt.getTextFromEntry(this.textField1).charAt(0);
-			this.beerStock = Integer.parseInt(this.gt.getTextFromEntry(this.textField2));
-			this.beerCost = Double.parseDouble(this.gt.getTextFromEntry(this.textField3));
-			this.beerGood = Boolean.parseBoolean(this.gt.getTextFromEntry(this.textField4));
+			
+			this.beerName[this.counter] = this.gt.getTextFromEntry(this.textField0);
+			this.beerScore[this.counter] = this.gt.getTextFromEntry(this.textField1).charAt(0);
+			this.beerStock[this.counter] = Integer.parseInt(this.gt.getTextFromEntry(this.textField2));
+			this.beerCost[this.counter] = Double.parseDouble(this.gt.getTextFromEntry(this.textField3));
+			this.beerGood[this.counter] = Boolean.parseBoolean(this.gt.getTextFromEntry(this.textField4));
 
-			if (beerName.isBlank())
-				this.beerName = gt.getInputString("Please enter the beers name.");
+			if (beerName[this.counter].isBlank())
+				this.beerName[this.counter] = gt.getInputString("Please enter the beers name.");
 
-			if (Character.isAlphabetic(beerScore) == false)
-				this.beerScore = gt.getInputString("Please re-enter a score from A to F").charAt(0);
+			if (Character.isAlphabetic(beerScore[this.counter]) == false)
+				this.beerScore[this.counter] = gt.getInputString("Please re-enter a score from A to F").charAt(0);
 
-			if (beerStock <= 0)
-				this.beerStock = Integer
+			if (beerStock[this.counter] <= 0)
+				this.beerStock[this.counter] = Integer
 						.parseInt(this.gt.getInputString("Please enter how many " + beerName + " you have in stock"));
 
-			if (this.beerCost <= 0)
-				this.beerCost = Double.parseDouble(gt.getInputString("Please Re-enter cost of the beer."));
+			if (this.beerCost[this.counter] <= 0)
+				this.beerCost[this.counter] = Double.parseDouble(gt.getInputString("Please Re-enter cost of the beer."));
 
-			if (!beerGood)
-				this.beerGood = Boolean.parseBoolean(gt.getInputString(
+			if (!beerGood[this.counter])
+				this.beerGood[this.counter] = Boolean.parseBoolean(gt.getInputString(
 						"You must stock it to enter. Please enter true to continue"));
 			else {
 				this.gt.showMessageDialog("Input added");
@@ -132,22 +140,22 @@ public class BeerTracker {
 			if (this.beersStock[this.counter] < this.beersStock[this.minArrayIndex])
 				this.minArrayIndex = this.counter;
 			
-			this.beerNames[this.counter] = this.beerName;
-			this.beerScores[this.counter] = this.beerScore;
-			this.beersStock[this.counter] = this.beerStock;
-			this.beerCosts[this.counter] = this.beerCost;
-			this.beersGood[this.counter] = this.beerGood;
+			this.beerNames[this.counter] = this.beerName[this.counter];
+			this.beerScores[this.counter] = this.beerScore[this.counter];
+			this.beersStock[this.counter] = this.beerStock[this.counter];
+			this.beerCosts[this.counter] = this.beerCost[this.counter];
+			this.beersGood[this.counter] = this.beerGood[this.counter];
 
 			this.counter++;
 			refreshTable();
 			clearTextField();
-			;
+			
 
 		}
 		if (this.counter == this.beerNumber)
 			this.gt.showWarningDialog(this.beerNumber + "  Entries Reached");
 	
-	}`
+	}
 
 	public void refreshTable() {
 		

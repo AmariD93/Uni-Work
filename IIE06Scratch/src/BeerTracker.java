@@ -52,7 +52,7 @@ public class BeerTracker {
 
 		this.gt.setXY(420, 0);
 		this.gt.println("Beer Name");
-		this.namesTextField = this.gt.addTextField("", 150);
+		this.namesTextField = this.gt.addTextField("", 100);
 
 		this.gt.println("");
 		this.gt.println("Rating");
