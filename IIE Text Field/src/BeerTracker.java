@@ -23,13 +23,13 @@ public class BeerTracker {
 	private double sumC;
 	private int counter;
 	private int minArrayIndex;
-private int j;
+	private int j;
 	// Setting arrays for Variable input
 	private String[] beerNames;
 	private char[] beerScores;
 	private int[] beersStock;
 	private double[] beerCosts;
-	private boolean[] beersGood;
+
 
 	public BeerTracker() {
 
@@ -54,6 +54,7 @@ private int j;
 		this.gt.println("Stock");
 		this.gt.addTextField("", 150);
 		this.gt.println("");
+
 
 		this.gt.println("");
 		this.gt.addButton("Add", this, "addRecord");
@@ -80,14 +81,10 @@ private int j;
 			this.beerNames = new String[this.beerNumber];
 			this.beerScores = new char[this.beerNumber];
 			this.beersStock = new int[this.beerNumber];
-			this.beerCosts = new double[this.beerNumber];
-			this.beersGood = new boolean[this.beerNumber];
+	
+			
 			
 		}
-
-		else {
-			this.gt.showErrorDialog("User has Cancelled");
-		}	
 	}
 
 	public void addRecord() {
@@ -99,10 +96,12 @@ private int j;
 			this.beerName = this.gt.getTextFromEntry(0);
 			this.beerScore =this.gt.getTextFromEntry(1).charAt(0);
 			this.beerStock = Integer.parseInt(this.gt.getTextFromEntry(2)); 
+	
 			
 			this.beerNames[this.counter] = this.beerName;
 			this.beerScores[this.counter] = this.beerScore;
 			this.beersStock[this.counter] = this.beerStock;
+			
 			
 			this.counter+=1;
 			refreshTable();
@@ -116,7 +115,7 @@ private int j;
 		
 		while (this.j < this.beerNumber) {
 
-			this.gt.addRowToTable(0, this.beerNames[this.j] + "\t" + this.beerScores[this.j] + "\t" + this.beersStock[this.j] + "\t" +  "\t" + (this.j+1));
+			this.gt.addRowToTable(0, this.beerNames[this.j] + "\t" + this.beerScores[this.j] + "\t" + this.beersStock[this.j] + "\t" +   "\t" + (this.j+1));
 			//this.gt.addRowToTable(0, this.beerNames[this.j] + "\t " + this.beerScores[this.j] + "\t "
 				//	+ this.beersStock[this.j] + "\t " + "$" + this.beerCosts[this.j] + "\t" + (this.j + 1));
 			this.j++;
