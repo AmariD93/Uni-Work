@@ -1,7 +1,16 @@
 import java.awt.Color;
 import java.util.Arrays;
-
 public class beerArray {
+	
+	
+	private GTerm gt;
+	
+	
+	
+	public beerArray() {
+		
+	}
+	
 	public static void main(String[] args) {
 		GTerm gt = new GTerm(420, 400);
 
