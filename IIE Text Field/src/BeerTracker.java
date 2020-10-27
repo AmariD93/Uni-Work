@@ -49,6 +49,7 @@ private int j;
 		this.gt.addButton("Add", this, "addRecord");
 		this.gt.addButton("More info", this, "moreInfo");
 		this.gt.addButton("Close", this, "close");
+		this.gt.addButton("Add more Records",this,"moreRecords");
 		this.gt.println("");
 		this.beerNumber = 0;
 		this.j=0;
@@ -97,6 +98,9 @@ private int j;
 			this.counter+=1;
 			refreshTable();
 		}
+		if (this.counter == this.beerNumber)
+			this.gt.showWarningDialog("Max Entries Reached");
+			
 	}
 	
 	public void refreshTable() { 
@@ -111,8 +115,25 @@ private int j;
 		}
 		
 	}
-			
-			/*
+	public void clearTextField() {
+		int i=0;
+		while (i<4) {
+		this.gt.setTextInEntry(i, "");
+		i++;
+		}
+	}
+	public void close() {
+		this.gt.close();
+	}
+	public static void main(String[] args) {
+		BeerTracker prmObj = new BeerTracker();
+
+		// gt.showHelp();
+
+	}
+}
+
+	/*
 			 * this.userAnswer = gt .getInputString("Beer " + (this.counter + 1) +
 			 * "\nBeers name, Score for A to F," +
 			 * " How many you have in stock, How much does the beer cost?, Have you drank this beer?"
@@ -160,18 +181,10 @@ private int j;
 		
 		
 		
-		// if (this.counter == this.beerNumber)
-		// this.gt.showWarningDialog(this.beerNumber + " Entries Reached");
 	
 
 
-	public void clearTextField() {
-		int i=0;
-		while (i<4) {
-		this.gt.setTextInEntry(i, "");
-		i++;
-		}
-	}
+	
 
 	/*
 	 * public void moreInfo() {
@@ -199,18 +212,9 @@ private int j;
 	 * 
 	 * }
 	 */
-	public void close() {
-		this.gt.close();
-	}
-
+	
 	// CD, C, 18, 7.45, true
 	// Rieschs, B, 17, 3.50, true
 	// Asahi, A, 35, 8.65, true
 
-	public static void main(String[] args) {
-		BeerTracker prmObj = new BeerTracker();
-
-		// gt.showHelp();
-
-	}
-}
+	
